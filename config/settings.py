@@ -51,6 +51,11 @@ def load_settings(env: dict[str, str] | None = None) -> Settings:
 
     def get(name: str, default: str | None = None) -> str | None:
         value = merged.get(name, default)
+        # Secrets pasted into GitHub (or .env) often carry a trailing newline
+        # or stray spaces; an API token with whitespace makes an invalid HTTP
+        # header, so normalize every value here rather than at each call site.
+        if isinstance(value, str):
+            value = value.strip()
         return value if value not in ("", None) else default
 
     return Settings(
