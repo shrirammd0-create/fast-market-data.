@@ -43,12 +43,15 @@ jobs:
           CME_API_KEY: ${{ secrets.CME_API_KEY }}
         run: python main.py --mode snapshot --lookback 15m
 
-      - name: Commit and push market_updates.txt
+      - name: Commit and push market_updates.txt + data/market_state_snapshot.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -f market_updates.txt ]; then
             git add market_updates.txt
+          fi
+          if [ -f data/market_state_snapshot.json ]; then
+            git add data/market_state_snapshot.json
           fi
           if git diff --cached --quiet; then
             echo "No market update produced this run (missing secrets or market closed); nothing to commit."

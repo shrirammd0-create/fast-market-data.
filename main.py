@@ -50,8 +50,10 @@ def build_parser() -> argparse.ArgumentParser:
         help="analysis window, e.g. 15m or 1h (default: 15m)",
     )
     parser.add_argument("--output", help="override output text file (default: market_updates.txt)")
+    parser.add_argument("--json-output",
+                        help="override machine-readable output (default: data/market_state_snapshot.json)")
     parser.add_argument("--no-append", action="store_true",
-                        help="print the snapshot but do not append it to the output file")
+                        help="print the snapshot but do not write the text or JSON outputs")
     parser.add_argument("-v", "--verbose", action="store_true", help="debug logging")
     return parser
 
@@ -71,6 +73,8 @@ def main(argv: list[str] | None = None) -> int:
     settings = load_settings()
     if args.output:
         settings = dataclasses.replace(settings, output_file=args.output)
+    if args.json_output:
+        settings = dataclasses.replace(settings, json_output=args.json_output)
 
     if args.mode == "snapshot":
         return run_snapshot(settings, lookback_minutes=args.lookback, no_append=args.no_append)
