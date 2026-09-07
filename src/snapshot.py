@@ -27,7 +27,7 @@ from .indicators import (
     dxy_proxy_series,
     session_for,
 )
-from .resilience import TokenBucket
+from .resilience import RetryableError, TokenBucket
 from .storage import JsonCache, append_block
 
 logger = logging.getLogger(__name__)
@@ -141,6 +141,11 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
         candles = oanda.fetch_candles(settings.gold_instrument, "M1", count)
     except AdapterError as exc:
         logger.error("gold candle fetch failed permanently: %s", exc)
+        return 1
+    except RetryableError as exc:
+        # Retries exhausted (outage, blocked network): fail with a clean
+        # log line, not a traceback.
+        logger.error("gold candle fetch still failing after retries: %s", exc)
         return 1
     if len(candles) < 2:
         logger.warning("no recent candles for %s (market closed?) — skipping this run",

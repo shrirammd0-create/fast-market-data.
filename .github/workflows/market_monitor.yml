@@ -47,7 +47,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add market_updates.txt
+          if [ -f market_updates.txt ]; then
+            git add market_updates.txt
+          fi
           if git diff --cached --quiet; then
             echo "No market update produced this run (missing secrets or market closed); nothing to commit."
             exit 0
