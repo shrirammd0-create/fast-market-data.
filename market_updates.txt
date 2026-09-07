@@ -1,0 +1,15 @@
+========================================================================
+GOLD MICROSTRUCTURE SNAPSHOT — 2026-09-07 05:11:04 UTC
+XAU_USD (OANDA spot, tick-rule volume) | lookback 15m (15 x M1)
+------------------------------------------------------------------------
+Price:        4401.15
+Session VWAP: 4400.89  [tokyo]  price above VWAP
+POC:          4404.00  (331 vol)
+Value Area:   4399.80 – 4404.00  (70% of 2886 total vol)
+HVN:          4404.00, 4400.90
+LVN:          4401.20
+CVD (15m):    +72
+DIVERGENCE:   none flagged
+ABSORPTION:   none flagged
+Correlations (1m log-returns): DXY(proxy): -0.42 | SPX500_USD: -0.21 | NAS100_USD: +0.75 | US30_USD: +0.65
+========================================================================
