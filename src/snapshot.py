@@ -1,21 +1,27 @@
 """REST snapshot mode — the serverless (cron) entry into the engine.
 
-Fetches the last N minutes of 1-minute candles over REST, rebuilds the
-gold footprint (plus the COMEX GC true-volume footprint when a licensed
-feed is configured), computes POC/VA/HVN/LVN, CVD + divergence, session
-VWAP, absorption/exhaustion, and cross-asset correlations, appends a
-timestamped block to the output text file, and exits cleanly.
+One cycle:
+
+1. Pull full OANDA depth for gold concurrently (M1/M5/H4 bid-ask-mid
+   candles, order book, position book) — see ``market_state``.
+2. Rebuild the tick-rule footprint from the last ``lookback`` M1 bars
+   (plus the COMEX GC true-volume footprint when a licensed feed is set).
+3. Compute POC/VA/HVN/LVN, CVD + divergence, session VWAP,
+   absorption/exhaustion, cross-asset correlations.
+4. Write the machine-readable payload to ``data/market_state_snapshot.json``
+   and append a human-readable block to ``market_updates.txt``.
 """
 
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
 from config.settings import Settings
 
 from .adapters import CMEComexAdapter, OandaAdapter
-from .adapters.base import AdapterError, Candle
+from .adapters.base import Candle
 from .engine import FootprintEngine, TickRuleClassifier, build_profile, classify_by_flag
 from .engine.volume_nodes import VolumeProfile
 from .indicators import (
@@ -27,8 +33,9 @@ from .indicators import (
     dxy_proxy_series,
     session_for,
 )
-from .resilience import RetryableError, TokenBucket
-from .storage import JsonCache, append_block
+from .market_state import build_market_state
+from .resilience import TokenBucket
+from .storage import JsonCache, append_block, write_json
 
 logger = logging.getLogger(__name__)
 
@@ -40,6 +47,12 @@ def _fetch_closes(adapter: OandaAdapter, instrument: str, count: int) -> list[fl
     except Exception as exc:  # one bad leg must not kill the snapshot
         logger.warning("could not fetch %s for correlations: %s", instrument, exc)
         return []
+
+
+def _fetch_closes_many(adapter: OandaAdapter, instruments: list[str], count: int) -> dict[str, list[float]]:
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {inst: pool.submit(_fetch_closes, adapter, inst, count) for inst in instruments}
+        return {inst: fut.result() for inst, fut in futures.items()}
 
 
 def _fmt(value: float | None, spec: str = ".2f", none: str = "n/a") -> str:
@@ -63,6 +76,84 @@ def _last_price_from_log(path: str) -> float | None:
         return None
 
 
+def profile_rows(engine: FootprintEngine, profile: VolumeProfile) -> dict:
+    """Footprint levels as flat rows for the JSON payload."""
+    return {
+        "tick_size": engine.tick_size,
+        "poc": profile.poc,
+        "poc_volume": profile.poc_volume,
+        "value_area_low": profile.value_area_low,
+        "value_area_high": profile.value_area_high,
+        "value_area_pct": profile.value_area_pct,
+        "hvns": list(profile.hvns),
+        "lvns": list(profile.lvns),
+        "total_volume": profile.total_volume,
+        "cumulative_delta": engine.cumulative_delta,
+        "levels": [
+            {
+                "price": lv.price,
+                "buy_volume": lv.buy_volume,
+                "sell_volume": lv.sell_volume,
+                "unknown_volume": lv.unknown_volume,
+                "total_volume": lv.total_volume,
+                "delta": lv.delta,
+            }
+            for lv in engine.levels()
+        ],
+        "bar_deltas": [
+            {"close": b.close, "volume": b.volume, "delta": b.delta} for b in engine.bar_deltas
+        ],
+    }
+
+
+def _depth_lines(payload: dict) -> list[str]:
+    """Human-readable one-liners summarizing the machine payload."""
+    lines: list[str] = []
+    an = payload.get("analytics", {})
+
+    svi = an.get("spread_volatility_index")
+    if svi and svi.get("count"):
+        voids = svi["liquidity_voids"]
+        void_txt = (
+            f"{len(voids)} void(s)"
+            + (f", latest {voids[-1]['price_low']:.2f}–{voids[-1]['price_high']:.2f}"
+               f" @ {voids[-1]['time'][11:16]}Z" if voids else "")
+        )
+        lines.append(f"Spread SVI:   mean {svi['mean']:.3f} | latest {svi['latest']:.3f} | "
+                     f"max {svi['max']:.3f} | {void_txt}")
+
+    ofi = an.get("order_flow_imbalance")
+    if ofi:
+        s = ofi["summary"]
+        top = sorted(ofi["flagged_buckets"], key=lambda r: -r["total_pct"])[:3]
+        top_txt = ", ".join(f"{r['price']:.2f}({r['dominant_side'][0].upper()})" for r in top) or "none"
+        lines.append(f"Order book:   {s['flagged_count']}/{s['bucket_count']} buckets ≥{ofi['ratio_threshold']:.0f}:1 "
+                     f"| long above {s['long_pct_above_price']:.2f}% short below {s['short_pct_below_price']:.2f}% "
+                     f"| top: {top_txt}")
+
+    pos = an.get("position_imbalance")
+    if pos:
+        tl, ts = pos["trapped_longs"][:2], pos["trapped_shorts"][:2]
+        tl_txt = ", ".join(f"{r['price']:.2f}" for r in tl) or "none"
+        ts_txt = ", ".join(f"{r['price']:.2f}" for r in ts) or "none"
+        lines.append(f"Positions:    trapped longs {pos['trapped_long_pct_total']:.2f}% [{tl_txt}] "
+                     f"| trapped shorts {pos['trapped_short_pct_total']:.2f}% [{ts_txt}]")
+
+    vd = an.get("volume_delta_m5")
+    if vd and vd.get("count"):
+        lines.append(f"M5 delta:     tick-rule {vd['cumulative_delta']:+.0f} | "
+                     f"body-weighted {vd['cumulative_delta_body_weighted']:+.0f} "
+                     f"over {vd['count']} bars ({vd['total_volume']:.0f} ticks)")
+
+    counts = " ".join(f"{g}:{len(rows)}" for g, rows in payload.get("candles", {}).items())
+    ob = payload.get("order_book") or {}
+    pb = payload.get("position_book") or {}
+    lines.append(f"JSON:         candles[{counts}] OB:{len(ob.get('buckets', []))} "
+                 f"PB:{len(pb.get('buckets', []))} buckets"
+                 + (f" | errors: {', '.join(payload['errors'])}" if payload.get("errors") else ""))
+    return lines
+
+
 def format_snapshot_block(
     *,
     now: datetime,
@@ -78,6 +169,7 @@ def format_snapshot_block(
     correlations: dict[str, float | None],
     prev_close: float | None,
     gc_summary: str | None,
+    depth_lines: list[str] | None = None,
 ) -> str:
     last = candles[-1]
     change_line = ""
@@ -118,6 +210,9 @@ def format_snapshot_block(
         lines.append(gc_summary)
     corr_bits = [f"{name}: {_fmt(val, '+.2f')}" for name, val in correlations.items()]
     lines.append("Correlations (1m log-returns): " + (" | ".join(corr_bits) or "n/a"))
+    if depth_lines:
+        lines.append("-" * 72)
+        lines.extend(depth_lines)
     lines.append("=" * 72)
     return "\n".join(lines)
 
@@ -135,19 +230,19 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
         )
         return 0
 
+    # --- Full-depth pull (M1/M5/H4 BAM candles + order/position books) ---
+    state = build_market_state(oanda, settings, lookback_minutes, now=now)
+    if state.depth.errors:
+        logger.warning("market depth sections with problems: %s", state.depth.errors)
+
     # One extra candle seeds the tick rule and the return series.
     count = lookback_minutes + 1
-    try:
-        candles = oanda.fetch_candles(settings.gold_instrument, "M1", count)
-    except AdapterError as exc:
-        logger.error("gold candle fetch failed permanently: %s", exc)
-        return 1
-    except RetryableError as exc:
-        # Retries exhausted (outage, blocked network): fail with a clean
-        # log line, not a traceback.
-        logger.error("gold candle fetch still failing after retries: %s", exc)
-        return 1
+    candles = [c.to_candle() for c in state.m1[-count:]]
     if len(candles) < 2:
+        m1_error = state.depth.errors.get("candles:M1")
+        if m1_error and m1_error != "empty response":
+            logger.error("gold M1 candle fetch failed: %s", m1_error)
+            return 1
         logger.warning("no recent candles for %s (market closed?) — skipping this run",
                        settings.gold_instrument)
         return 0
@@ -172,6 +267,7 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
 
     # --- COMEX GC true-volume footprint (centralized), when configured ---
     gc_summary = None
+    gc_profile_rows = None
     cme = CMEComexAdapter(settings.cme_api_url, settings.cme_api_key, rate_limiter=bucket)
     if cme.is_configured():
         try:
@@ -182,6 +278,7 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
                     (t.price, t.size, classify_by_flag(t.aggressor)) for t in gc_trades
                 )
                 gc_profile = build_profile(gc_engine)
+                gc_profile_rows = profile_rows(gc_engine, gc_profile)
                 gc_summary = (
                     f"COMEX GC:     POC {_fmt(gc_profile.poc)} | "
                     f"delta {gc_engine.cumulative_delta:+.0f} on "
@@ -192,23 +289,44 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
             logger.warning("COMEX GC fetch failed, continuing with spot only: %s", exc)
 
     # --- Cross-asset correlations: DXY proxy + major indices ---
-    components = {pair: _fetch_closes(oanda, pair, count) for pair in DXY_WEIGHTS}
-    dxy = dxy_proxy_series(components)
+    legs = list(DXY_WEIGHTS) + list(settings.index_instruments)
+    series = _fetch_closes_many(oanda, legs, count)
+    dxy = dxy_proxy_series({pair: series.get(pair, []) for pair in DXY_WEIGHTS})
     others: dict[str, list[float]] = {}
     if dxy:
         others["DXY(proxy)"] = dxy
     for idx in settings.index_instruments:
-        series = _fetch_closes(oanda, idx, count)
-        if series:
-            others[idx] = series
+        if series.get(idx):
+            others[idx] = series[idx]
     correlations = correlation_snapshot(closes, others)
 
-    # --- Run-over-run change via local cache ---
+    # --- Run-over-run change via local cache (falls back to the text log) ---
     cache = JsonCache(settings.cache_dir)
     prev_close = cache.get("last_close", max_age_seconds=6 * 3600)
     if prev_close is None:
         prev_close = _last_price_from_log(settings.output_file)
     cache.set("last_close", candles[-1].close)
+
+    # --- Machine-readable payload: add the footprint + session context ---
+    payload = state.payload
+    payload["analytics"]["volume_profile_m1"] = profile_rows(engine, profile)
+    if gc_profile_rows:
+        payload["analytics"]["volume_profile_comex_gc"] = gc_profile_rows
+    payload["analytics"]["session_context"] = {
+        "session": session_name,
+        "session_vwap": vwap.value,
+        "price_vs_vwap": (
+            None if vwap.value is None else ("above" if candles[-1].close >= vwap.value else "below")
+        ),
+        "cvd_lookback": engine.cumulative_delta,
+        "divergences": [{"kind": d.kind, "description": d.description} for d in divergences],
+        "absorption_events": [
+            {"kind": e.kind, "price": e.price, "volume": e.volume, "description": e.description}
+            for e in absorption_events
+        ],
+        "correlations_1m_log_returns": correlations,
+        "previous_run_close": prev_close,
+    }
 
     block = format_snapshot_block(
         now=now,
@@ -224,9 +342,12 @@ def run_snapshot(settings: Settings, lookback_minutes: int = 15, no_append: bool
         correlations=correlations,
         prev_close=prev_close,
         gc_summary=gc_summary,
+        depth_lines=_depth_lines(payload),
     )
     print(block)
     if not no_append:
         path = append_block(settings.output_file, block)
         logger.info("appended snapshot block to %s", path)
+        json_path = write_json(settings.json_output, payload)
+        logger.info("wrote machine-readable market state to %s", json_path)
     return 0

@@ -1,9 +1,15 @@
 """OANDA v20 REST adapter — spot XAU/USD, forex pairs, and index CFDs.
 
-Decentralized feed: candle ``volume`` is tick volume (number of price
-updates), which the engine classifies with the tick rule. Every request goes
-through the shared token bucket and the backoff decorator, and every payload
-through the malformed-packet guard.
+Endpoints covered:
+
+* ``/v3/instruments/{i}/candles``      — Bid / Ask / Mid candles (price=BAM)
+  at any granularity; tick ``volume`` is the number of price updates.
+* ``/v3/instruments/{i}/orderBook``    — pending-order clusters per price
+  bucket (``longCountPercent`` / ``shortCountPercent``).
+* ``/v3/instruments/{i}/positionBook`` — open-position clusters per bucket.
+
+Every request goes through the shared token bucket and the backoff
+decorator, and every payload through the malformed-packet guard.
 """
 
 from __future__ import annotations
@@ -16,7 +22,7 @@ import requests
 from ..resilience.backoff import RetryableError, RetryableHTTPError, is_retryable_status, retry_with_backoff
 from ..resilience.rate_limiter import TokenBucket
 from ..resilience.schema_guard import Field, filter_valid, number_like, require_keys, validate_record
-from .base import AdapterError, Candle, MarketDataAdapter
+from .base import AdapterError, BookBucket, BookSnapshot, Candle, MarketDataAdapter, OHLC, RichCandle
 
 logger = logging.getLogger(__name__)
 
@@ -26,17 +32,26 @@ _HOSTS = {
 }
 
 # One OANDA candle record, as served by /v3/instruments/{i}/candles.
+# ``mid`` / ``bid`` / ``ask`` are present according to the ``price`` param;
+# at least one must be there (checked after the schema pass).
 _CANDLE_SCHEMA = {
     "time": Field((str,)),
     "volume": Field((int, float), check=lambda v: v >= 0),
     "complete": Field((bool,), required=False),
-    "mid": Field((dict,)),
+    "mid": Field((dict,), required=False),
+    "bid": Field((dict,), required=False),
+    "ask": Field((dict,), required=False),
 }
-_MID_SCHEMA = {
+_OHLC_SCHEMA = {
     "o": Field((str, int, float), check=number_like),
     "h": Field((str, int, float), check=number_like),
     "l": Field((str, int, float), check=number_like),
     "c": Field((str, int, float), check=number_like),
+}
+_BUCKET_SCHEMA = {
+    "price": Field((str, int, float), check=number_like),
+    "longCountPercent": Field((str, int, float), check=number_like),
+    "shortCountPercent": Field((str, int, float), check=number_like),
 }
 
 
@@ -47,6 +62,16 @@ def _parse_time(raw: str) -> datetime:
         head, frac = raw.split(".", 1)
         raw = f"{head}.{frac[:6]}"
     return datetime.fromisoformat(raw).replace(tzinfo=timezone.utc)
+
+
+def _parse_ohlc(block: dict | None, label: str) -> OHLC | None:
+    if block is None:
+        return None
+    errors = validate_record(block, _OHLC_SCHEMA)
+    if errors:
+        logger.warning("dropping oanda %s block: %s", label, "; ".join(errors))
+        return None
+    return OHLC(float(block["o"]), float(block["h"]), float(block["l"]), float(block["c"]))
 
 
 class OandaAdapter(MarketDataAdapter):
@@ -63,6 +88,7 @@ class OandaAdapter(MarketDataAdapter):
         self.api_key = api_key
         if environment not in _HOSTS:
             raise AdapterError(f"unknown OANDA environment '{environment}' (use practice/live)")
+        self.environment = environment
         self.base_url = _HOSTS[environment]
         self.rate_limiter = rate_limiter or TokenBucket(rate_per_minute=60)
         self.timeout = timeout
@@ -98,31 +124,102 @@ class OandaAdapter(MarketDataAdapter):
             # Truncated/garbled body mid-transfer is transient — retry it.
             raise RetryableError(f"OANDA returned non-JSON body: {exc}") from exc
 
-    def fetch_candles(self, instrument: str, granularity: str = "M1", count: int = 16) -> list[Candle]:
+    # ------------------------------------------------------------------ candles
+
+    def fetch_rich_candles(
+        self,
+        instrument: str,
+        granularity: str = "M1",
+        count: int = 16,
+        price: str = "BAM",
+    ) -> list[RichCandle]:
+        """Fetch candles carrying bid, ask and mid OHLC together.
+
+        ``price`` is any combination of B/A/M (OANDA convention). Records
+        whose mid block is unusable are dropped; a bad bid or ask block only
+        drops that side, so the mid-based engine keeps working.
+        """
         if not self.is_configured():
             raise AdapterError("OANDA_API_KEY is not set")
+        count = max(1, min(int(count), 5000))  # OANDA hard limit
         payload = self._get(
             f"/v3/instruments/{instrument}/candles",
-            {"granularity": granularity, "count": count, "price": "M"},
+            {"granularity": granularity, "count": count, "price": price},
         )
-        if not require_keys(payload, ["candles"], context=f"oanda:{instrument}"):
+        if not require_keys(payload, ["candles"], context=f"oanda:{instrument}:{granularity}"):
             return []
-        records, _ = filter_valid(payload["candles"], _CANDLE_SCHEMA, context=f"oanda:{instrument}")
+        records, _ = filter_valid(payload["candles"], _CANDLE_SCHEMA,
+                                  context=f"oanda:{instrument}:{granularity}")
 
-        candles: list[Candle] = []
+        candles: list[RichCandle] = []
         for rec in records:
-            errors = validate_record(rec["mid"], _MID_SCHEMA)
-            if errors:
-                logger.warning("dropping oanda candle with bad mid block: %s", "; ".join(errors))
-                continue
-            mid = rec["mid"]
-            candles.append(Candle(
+            mid = _parse_ohlc(rec.get("mid"), "mid")
+            bid = _parse_ohlc(rec.get("bid"), "bid")
+            ask = _parse_ohlc(rec.get("ask"), "ask")
+            if mid is None:
+                if bid is not None and ask is not None:
+                    # Reconstruct mid from bid/ask when only those were requested.
+                    mid = OHLC((bid.open + ask.open) / 2, (bid.high + ask.high) / 2,
+                               (bid.low + ask.low) / 2, (bid.close + ask.close) / 2)
+                else:
+                    logger.warning("dropping oanda candle without a usable mid block")
+                    continue
+            candles.append(RichCandle(
                 ts=_parse_time(rec["time"]),
-                open=float(mid["o"]),
-                high=float(mid["h"]),
-                low=float(mid["l"]),
-                close=float(mid["c"]),
                 volume=float(rec["volume"]),
+                complete=bool(rec.get("complete", True)),
+                mid=mid, bid=bid, ask=ask,
             ))
         candles.sort(key=lambda c: c.ts)
         return candles
+
+    def fetch_candles(self, instrument: str, granularity: str = "M1", count: int = 16) -> list[Candle]:
+        """Mid-price OHLCV candles (engine-facing view)."""
+        return [c.to_candle() for c in self.fetch_rich_candles(instrument, granularity, count, price="M")]
+
+    # ------------------------------------------------------------------- books
+
+    def _fetch_book(self, kind: str, instrument: str, at: datetime | None) -> BookSnapshot | None:
+        if not self.is_configured():
+            raise AdapterError("OANDA_API_KEY is not set")
+        path_key = "orderBook" if kind == "order_book" else "positionBook"
+        params = {}
+        if at is not None:
+            params["time"] = at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        payload = self._get(f"/v3/instruments/{instrument}/{path_key}", params)
+        if not require_keys(payload, [path_key], context=f"oanda:{instrument}:{kind}"):
+            return None
+        book = payload[path_key]
+        if not isinstance(book, dict) or not isinstance(book.get("buckets"), list):
+            logger.error("oanda %s for %s has no bucket list", kind, instrument)
+            return None
+        for key in ("price", "bucketWidth"):
+            if not number_like(book.get(key)):
+                logger.error("oanda %s for %s: bad header field %s=%r", kind, instrument, key, book.get(key))
+                return None
+        records, _ = filter_valid(book["buckets"], _BUCKET_SCHEMA, context=f"oanda:{instrument}:{kind}")
+        buckets = tuple(sorted(
+            (BookBucket(float(r["price"]), float(r["longCountPercent"]), float(r["shortCountPercent"]))
+             for r in records),
+            key=lambda b: b.price,
+        ))
+        try:
+            ts = _parse_time(str(book["time"]))
+        except (KeyError, ValueError):
+            ts = datetime.now(timezone.utc)
+        return BookSnapshot(
+            kind=kind,
+            instrument=instrument,
+            ts=ts,
+            price=float(book["price"]),
+            bucket_width=float(book["bucketWidth"]),
+            buckets=buckets,
+        )
+
+    def fetch_order_book(self, instrument: str, at: datetime | None = None) -> BookSnapshot | None:
+        """Pending limit/stop order clusters per price bucket."""
+        return self._fetch_book("order_book", instrument, at)
+
+    def fetch_position_book(self, instrument: str, at: datetime | None = None) -> BookSnapshot | None:
+        """Open-position clusters per price bucket."""
+        return self._fetch_book("position_book", instrument, at)

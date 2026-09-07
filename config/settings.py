@@ -13,6 +13,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+# Candles fetched per granularity for the machine-readable snapshot.
+# M1 is also the source of the human-readable footprint (last ``lookback``
+# bars of it). OANDA caps a single request at 5000.
+DEFAULT_CANDLE_COUNTS: dict[str, int] = {"M1": 120, "M5": 96, "H4": 60}
+
 
 def _load_dotenv(path: Path) -> dict[str, str]:
     values: dict[str, str] = {}
@@ -28,6 +33,22 @@ def _load_dotenv(path: Path) -> dict[str, str]:
     return values
 
 
+def _parse_candle_counts(raw: str | None) -> dict[str, int]:
+    """'M1:120,M5:96,H4:60' -> {'M1': 120, ...}; falls back to defaults."""
+    if not raw:
+        return dict(DEFAULT_CANDLE_COUNTS)
+    counts: dict[str, int] = {}
+    for part in raw.split(","):
+        if ":" not in part:
+            continue
+        gran, _, count = part.partition(":")
+        try:
+            counts[gran.strip().upper()] = max(2, min(int(count), 5000))
+        except ValueError:
+            continue
+    return counts or dict(DEFAULT_CANDLE_COUNTS)
+
+
 @dataclass(frozen=True)
 class Settings:
     oanda_api_key: str | None = None
@@ -37,12 +58,20 @@ class Settings:
     ibkr_gateway_url: str | None = None
     requests_per_minute: float = 60.0
     output_file: str = "market_updates.txt"
+    json_output: str = "data/market_state_snapshot.json"
     cache_dir: str = ".cache"
     # XAU/USD spot commonly quotes in 0.01 increments; the footprint grid
     # buckets at 0.1 to keep 15-minute profiles readable.
     tick_size: float = 0.1
     gold_instrument: str = "XAU_USD"
     index_instruments: tuple[str, ...] = ("SPX500_USD", "NAS100_USD", "US30_USD")
+    candle_counts: dict[str, int] = field(default_factory=lambda: dict(DEFAULT_CANDLE_COUNTS))
+    # Order/position book buckets kept within ±this % of the current price.
+    book_window_pct: float = 5.0
+    # Long:short (or short:long) ratio above which a bucket is flagged.
+    ofi_ratio_threshold: float = 3.0
+    # Spread z-score above which an M1 bar is flagged as a liquidity void.
+    spread_void_z: float = 1.5
 
 
 def load_settings(env: dict[str, str] | None = None) -> Settings:
@@ -66,7 +95,12 @@ def load_settings(env: dict[str, str] | None = None) -> Settings:
         ibkr_gateway_url=get("IBKR_GATEWAY_URL"),
         requests_per_minute=float(get("REQUESTS_PER_MINUTE", "60") or 60),
         output_file=get("OUTPUT_FILE", "market_updates.txt") or "market_updates.txt",
+        json_output=get("JSON_OUTPUT", "data/market_state_snapshot.json") or "data/market_state_snapshot.json",
         cache_dir=get("CACHE_DIR", ".cache") or ".cache",
         tick_size=float(get("TICK_SIZE", "0.1") or 0.1),
         gold_instrument=get("GOLD_INSTRUMENT", "XAU_USD") or "XAU_USD",
+        candle_counts=_parse_candle_counts(get("CANDLE_COUNTS")),
+        book_window_pct=float(get("BOOK_WINDOW_PCT", "5") or 5),
+        ofi_ratio_threshold=float(get("OFI_RATIO_THRESHOLD", "3") or 3),
+        spread_void_z=float(get("SPREAD_VOID_Z", "1.5") or 1.5),
     )

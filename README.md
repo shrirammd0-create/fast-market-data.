@@ -17,7 +17,8 @@ appends each snapshot to [`market_updates.txt`](market_updates.txt).
 │   ├── engine/              # aggressor logic, price-level footprint, volume nodes
 │   ├── resilience/          # backoff+jitter, token-bucket limiter, schema guard
 │   ├── indicators/          # CVD & divergence, session VWAP, absorption, correlations
-│   ├── storage/             # market_updates.txt appender, JSON cache
+│   ├── storage/             # market_updates.txt appender, JSON writer, cache
+│   ├── market_state.py      # concurrent full-depth pull + machine payload
 │   ├── snapshot.py          # REST snapshot orchestration (cron mode)
 │   └── main.py              # shim → root main.py
 ├── tests/                   # unit tests (pytest)
@@ -56,6 +57,51 @@ derives **POC**, **Value Area** (70% expansion from POC), **HVN**, and
   formula over the six component pairs) and index CFDs (SPX500, NAS100,
   US30).
 
+## Machine-readable market state (`data/market_state_snapshot.json`)
+
+Every run also writes a dense, flat JSON payload built for an external
+model to run its own POI / POC / volume-profile algorithms on directly,
+with no cleaning step. It is overwritten each run (git history keeps every
+prior version).
+
+**Endpoints pulled concurrently** (through the shared rate limiter):
+
+| Endpoint | What is extracted |
+| --- | --- |
+| `/v3/instruments/{i}/candles` at `M1`, `M5`, `H4` with `price=BAM` | Bid, Ask and Mid OHLC side by side, tick volume, per-bar spread (open / close / Ask-High − Bid-Low) |
+| `/v3/instruments/{i}/orderBook` | `price`, `longCountPercent`, `shortCountPercent` per bucket — where pending limit orders and stops cluster |
+| `/v3/instruments/{i}/positionBook` | same fields for open positions — where retail is positioned |
+
+Book buckets are kept within ±`BOOK_WINDOW_PCT` (default 5 %) of the current
+price; the full bucket count is recorded so nothing is hidden.
+
+**Pre-processing matrices** (`analytics` section):
+
+* `order_flow_imbalance` — per bucket `net_imbalance = long% − short%`, the
+  long:short `ratio`, `dominant_side`, and `flagged` when the ratio is
+  ≥ 3:1 (`OFI_RATIO_THRESHOLD`) or the bucket is one-sided.
+* `position_imbalance` — the same matrix over the position book plus each
+  bucket's `distance_from_price` and `underwater_side`; `trapped_longs`
+  (long-heavy buckets above the market) and `trapped_shorts` (short-heavy
+  buckets below), ranked by `trapped_score = pct × |distance %|`.
+* `spread_volatility_index` — per M1 bar `spread_high_low = Ask High − Bid
+  Low`, its z-score against the window, and `liquidity_voids` where the
+  spread expanded past `SPREAD_VOID_Z` (default 1.5 σ).
+* `volume_delta_m5` — per M5 bar the tick-rule delta, a body-weighted delta
+  (`volume × (close − open) / (high − low)`), tick-count change, and the
+  running cumulative delta.
+* `volume_profile_m1` — the footprint levels (buy / sell / total volume,
+  delta per tick), POC, value area, HVN / LVN from the human-readable run.
+* `session_context` — session, VWAP, CVD, divergence and absorption flags,
+  correlations, previous run's close.
+
+Partial failures (e.g. a book endpoint returning 404 for an instrument) are
+recorded under `errors` and the rest of the payload is still written.
+
+Tuning via env: `CANDLE_COUNTS` (default `M1:120,M5:96,H4:60`, max 5000
+each), `BOOK_WINDOW_PCT`, `OFI_RATIO_THRESHOLD`, `SPREAD_VOID_Z`,
+`JSON_OUTPUT`. CLI: `--json-output FILE`.
+
 ## Resilience (why this doesn't crash the cron)
 
 * `retry_with_backoff` — exponential backoff with jitter on 429/5xx/network
@@ -88,7 +134,7 @@ python -m pytest tests/ -v
 [`market_monitor.yml`](.github/workflows/market_monitor.yml) runs every 15
 minutes (and on manual `workflow_dispatch`): checkout → Python 3.11 →
 `pip install` → `python main.py --mode snapshot --lookback 15m` →
-`git add market_updates.txt && git commit -m "Auto-update market data" && git push`
+`git add market_updates.txt data/market_state_snapshot.json && git commit -m "Auto-update market data" && git push`
 to `main` with the standard `GITHUB_TOKEN`.
 
 ### Required repository secrets
