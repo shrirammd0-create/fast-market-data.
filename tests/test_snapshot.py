@@ -37,6 +37,7 @@ def test_snapshot_appends_block(tmp_path):
     settings = Settings(
         oanda_api_key="test-key",
         output_file=str(tmp_path / "market_updates.txt"),
+        json_output=str(tmp_path / "data" / "market_state_snapshot.json"),
         cache_dir=str(tmp_path / ".cache"),
         requests_per_minute=6000,
     )
