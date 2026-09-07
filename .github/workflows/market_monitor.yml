@@ -1,0 +1,58 @@
+name: Market Monitor
+
+on:
+  schedule:
+    # Every 15 minutes. Note: GitHub cron is best-effort and may lag a few
+    # minutes under load; the snapshot always covers the trailing 15m window
+    # regardless of exact fire time.
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never let two runs race each other on the push step.
+concurrency:
+  group: market-monitor
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run engine (snapshot mode)
+        env:
+          OANDA_API_KEY: ${{ secrets.OANDA_API_KEY }}
+          OANDA_ENV: ${{ secrets.OANDA_ENV }}
+          CME_API_URL: ${{ secrets.CME_API_URL }}
+          CME_API_KEY: ${{ secrets.CME_API_KEY }}
+        run: python main.py --mode snapshot --lookback 15m
+
+      - name: Commit and push market_updates.txt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market_updates.txt
+          if git diff --cached --quiet; then
+            echo "No market update produced this run (missing secrets or market closed); nothing to commit."
+            exit 0
+          fi
+          git commit -m "Auto-update market data"
+          # Another run (or a human) may have pushed since checkout.
+          git pull --rebase origin main
+          git push origin HEAD:main
