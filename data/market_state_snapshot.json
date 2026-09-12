@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-12T10:03:47.125248+00:00",
+  "generated_at": "2026-09-12T13:36:27.352338+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,11 +5827,11 @@
     ]
   },
   "order_book": {
-    "time": "2026-09-12T10:00:00+00:00",
+    "time": "2026-09-12T13:20:00+00:00",
     "captured_price": 4349.42,
     "bucket_width": 0.5,
     "window_pct": 5.0,
-    "total_buckets_in_book": 2048,
+    "total_buckets_in_book": 2049,
     "buckets": [
       {
         "price": 4134.0,
@@ -6779,12 +6779,12 @@
         "short_count_percent": 0.0241
       },
       {
-        "price": 4348.5,
+        "price": 4349.5,
         "long_count_percent": 0.0,
         "short_count_percent": 0.0241
       },
       {
-        "price": 4349.5,
+        "price": 4350.5,
         "long_count_percent": 0.0,
         "short_count_percent": 0.0241
       },
@@ -6801,7 +6801,7 @@
       {
         "price": 4355.0,
         "long_count_percent": 0.0241,
-        "short_count_percent": 0.0482
+        "short_count_percent": 0.0241
       },
       {
         "price": 4355.5,
@@ -7876,7 +7876,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-09-12T10:00:00+00:00",
+    "time": "2026-09-12T13:20:00+00:00",
     "captured_price": 4349.42,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -10876,7 +10876,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-09-12T10:00:00+00:00",
+      "book_time": "2026-09-12T13:20:00+00:00",
       "reference_price": 4349.42,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -13338,19 +13338,6 @@
           "distance_pct": -0.0556
         },
         {
-          "price": 4348.5,
-          "long_pct": 0.0,
-          "short_pct": 0.0241,
-          "total_pct": 0.0241,
-          "net_imbalance": -0.0241,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -0.92,
-          "distance_pct": -0.0212
-        },
-        {
           "price": 4349.5,
           "long_pct": 0.0,
           "short_pct": 0.0241,
@@ -13362,6 +13349,19 @@
           "flagged": true,
           "distance_from_price": 0.08,
           "distance_pct": 0.0018
+        },
+        {
+          "price": 4350.5,
+          "long_pct": 0.0,
+          "short_pct": 0.0241,
+          "total_pct": 0.0241,
+          "net_imbalance": -0.0241,
+          "ratio": null,
+          "dominant_side": "short",
+          "one_sided": true,
+          "flagged": true,
+          "distance_from_price": 1.08,
+          "distance_pct": 0.0248
         },
         {
           "price": 4353.5,
@@ -13392,11 +13392,11 @@
         {
           "price": 4355.0,
           "long_pct": 0.0241,
-          "short_pct": 0.0482,
-          "total_pct": 0.0723,
-          "net_imbalance": -0.0241,
-          "ratio": 2.0,
-          "dominant_side": "short",
+          "short_pct": 0.0241,
+          "total_pct": 0.0482,
+          "net_imbalance": 0.0,
+          "ratio": 1.0,
+          "dominant_side": "balanced",
           "one_sided": false,
           "flagged": false,
           "distance_from_price": 5.58,
@@ -18189,19 +18189,6 @@
           "distance_pct": -0.0556
         },
         {
-          "price": 4348.5,
-          "long_pct": 0.0,
-          "short_pct": 0.0241,
-          "total_pct": 0.0241,
-          "net_imbalance": -0.0241,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -0.92,
-          "distance_pct": -0.0212
-        },
-        {
           "price": 4349.5,
           "long_pct": 0.0,
           "short_pct": 0.0241,
@@ -18213,6 +18200,19 @@
           "flagged": true,
           "distance_from_price": 0.08,
           "distance_pct": 0.0018
+        },
+        {
+          "price": 4350.5,
+          "long_pct": 0.0,
+          "short_pct": 0.0241,
+          "total_pct": 0.0241,
+          "net_imbalance": -0.0241,
+          "ratio": null,
+          "dominant_side": "short",
+          "one_sided": true,
+          "flagged": true,
+          "distance_from_price": 1.08,
+          "distance_pct": 0.0248
         },
         {
           "price": 4353.5,
@@ -20574,12 +20574,12 @@
         "long_pct_above_price": 4.4338,
         "short_pct_above_price": 8.6252,
         "long_pct_below_price": 4.0726,
-        "short_pct_below_price": 8.3833,
-        "net_imbalance_total": -8.5021
+        "short_pct_below_price": 8.3592,
+        "net_imbalance_total": -8.478
       }
     },
     "position_imbalance": {
-      "book_time": "2026-09-12T10:00:00+00:00",
+      "book_time": "2026-09-12T13:20:00+00:00",
       "reference_price": 4349.42,
       "ratio_threshold": 3.0,
       "matrix": [
