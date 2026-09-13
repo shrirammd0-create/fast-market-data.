@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-13T17:40:07.381619+00:00",
+  "generated_at": "2026-09-13T19:48:53.529457+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,7 +5827,7 @@
     ]
   },
   "order_book": {
-    "time": "2026-09-13T17:40:00+00:00",
+    "time": "2026-09-13T19:40:00+00:00",
     "captured_price": 4349.42,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -6387,11 +6387,6 @@
         "price": 4294.5,
         "long_count_percent": 0.0241,
         "short_count_percent": 0.0
-      },
-      {
-        "price": 4296.0,
-        "long_count_percent": 0.0,
-        "short_count_percent": 0.0241
       },
       {
         "price": 4299.5,
@@ -6962,6 +6957,11 @@
         "price": 4376.5,
         "long_count_percent": 0.0481,
         "short_count_percent": 0.0
+      },
+      {
+        "price": 4377.0,
+        "long_count_percent": 0.0,
+        "short_count_percent": 0.0241
       },
       {
         "price": 4379.0,
@@ -7891,7 +7891,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-09-13T17:40:00+00:00",
+    "time": "2026-09-13T19:40:00+00:00",
     "captured_price": 4349.42,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -10891,7 +10891,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-09-13T17:40:00+00:00",
+      "book_time": "2026-09-13T19:40:00+00:00",
       "reference_price": 4349.42,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -12337,19 +12337,6 @@
           "flagged": true,
           "distance_from_price": -54.92,
           "distance_pct": -1.2627
-        },
-        {
-          "price": 4296.0,
-          "long_pct": 0.0,
-          "short_pct": 0.0241,
-          "total_pct": 0.0241,
-          "net_imbalance": -0.0241,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -53.42,
-          "distance_pct": -1.2282
         },
         {
           "price": 4299.5,
@@ -13832,6 +13819,19 @@
           "flagged": true,
           "distance_from_price": 27.08,
           "distance_pct": 0.6226
+        },
+        {
+          "price": 4377.0,
+          "long_pct": 0.0,
+          "short_pct": 0.0241,
+          "total_pct": 0.0241,
+          "net_imbalance": -0.0241,
+          "ratio": null,
+          "dominant_side": "short",
+          "one_sided": true,
+          "flagged": true,
+          "distance_from_price": 27.58,
+          "distance_pct": 0.6341
         },
         {
           "price": 4379.0,
@@ -17398,19 +17398,6 @@
           "distance_pct": -1.2627
         },
         {
-          "price": 4296.0,
-          "long_pct": 0.0,
-          "short_pct": 0.0241,
-          "total_pct": 0.0241,
-          "net_imbalance": -0.0241,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -53.42,
-          "distance_pct": -1.2282
-        },
-        {
           "price": 4299.5,
           "long_pct": 0.0481,
           "short_pct": 0.0,
@@ -18514,6 +18501,19 @@
           "flagged": true,
           "distance_from_price": 27.08,
           "distance_pct": 0.6226
+        },
+        {
+          "price": 4377.0,
+          "long_pct": 0.0,
+          "short_pct": 0.0241,
+          "total_pct": 0.0241,
+          "net_imbalance": -0.0241,
+          "ratio": null,
+          "dominant_side": "short",
+          "one_sided": true,
+          "flagged": true,
+          "distance_from_price": 27.58,
+          "distance_pct": 0.6341
         },
         {
           "price": 4380.0,
@@ -20470,14 +20470,14 @@
         "bucket_count": 411,
         "flagged_count": 325,
         "long_pct_above_price": 4.4293,
-        "short_pct_above_price": 8.6641,
+        "short_pct_above_price": 8.6882,
         "long_pct_below_price": 4.1169,
-        "short_pct_below_price": 8.3975,
+        "short_pct_below_price": 8.3734,
         "net_imbalance_total": -8.5154
       }
     },
     "position_imbalance": {
-      "book_time": "2026-09-13T17:40:00+00:00",
+      "book_time": "2026-09-13T19:40:00+00:00",
       "reference_price": 4349.42,
       "ratio_threshold": 3.0,
       "matrix": [
