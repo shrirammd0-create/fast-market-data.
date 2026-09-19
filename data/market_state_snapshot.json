@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T18:47:35.340364+00:00",
+  "generated_at": "2026-09-19T21:17:10.566707+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,7 +5827,7 @@
     ]
   },
   "order_book": {
-    "time": "2026-09-19T18:40:00+00:00",
+    "time": "2026-09-19T21:00:00+00:00",
     "captured_price": 4378.385,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -7916,7 +7916,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-09-19T18:40:00+00:00",
+    "time": "2026-09-19T21:00:00+00:00",
     "captured_price": 4378.385,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -11146,7 +11146,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-09-19T18:40:00+00:00",
+      "book_time": "2026-09-19T21:00:00+00:00",
       "reference_price": 4378.385,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -20966,7 +20966,7 @@
       }
     },
     "position_imbalance": {
-      "book_time": "2026-09-19T18:40:00+00:00",
+      "book_time": "2026-09-19T21:00:00+00:00",
       "reference_price": 4378.385,
       "ratio_threshold": 3.0,
       "matrix": [
