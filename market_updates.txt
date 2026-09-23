@@ -2407,3 +2407,25 @@ Positions:    trapped longs 4.30% [4523.50, 4488.00] | trapped shorts 0.90% [411
 M5 delta:     tick-rule -2699 | body-weighted -6617 over 96 bars (150095 ticks)
 JSON:         candles[M1:120 M5:96 H4:60] OB:592 PB:618 buckets
 ========================================================================
+
+========================================================================
+GOLD MICROSTRUCTURE SNAPSHOT — 2026-09-23 14:52:35 UTC
+XAU_USD (OANDA spot, tick-rule volume) | lookback 15m (15 x M1)
+------------------------------------------------------------------------
+Price:        4292.85  (vs last run: -21.17 / -0.491%)
+Session VWAP: 4286.92  [new_york]  price above VWAP
+POC:          4285.70  (2039 vol)
+Value Area:   4284.40 – 4287.70  (70% of 16340 total vol)
+HVN:          4285.70
+LVN:          none
+CVD (15m):    +3868
+DIVERGENCE:   none flagged
+ABSORPTION:   none flagged
+Correlations (1m log-returns): DXY(proxy): -0.73 | SPX500_USD: +0.73 | NAS100_USD: +0.52 | US30_USD: +0.79
+------------------------------------------------------------------------
+Spread SVI:   mean 3.860 | latest 4.630 | max 14.230 | 7 void(s), latest 4284.09–4292.16 @ 14:51Z
+Order book:   429/584 buckets ≥3:1 | long above 5.08% short below 6.61% | top: 4326.00(S), 4337.00(S), 4316.50(S)
+Positions:    trapped longs 4.20% [4488.00, 4493.50] | trapped shorts 1.50% [4116.00, 4080.00]
+M5 delta:     tick-rule -1816 | body-weighted -11548 over 96 bars (278010 ticks)
+JSON:         candles[M1:120 M5:96 H4:60] OB:584 PB:626 buckets
+========================================================================
