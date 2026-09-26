@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-26T15:44:49.691208+00:00",
+  "generated_at": "2026-09-26T18:43:57.750477+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,11 +5827,11 @@
     ]
   },
   "order_book": {
-    "time": "2026-09-26T15:40:00+00:00",
+    "time": "2026-09-26T18:40:00+00:00",
     "captured_price": 4284.97,
     "bucket_width": 0.5,
     "window_pct": 5.0,
-    "total_buckets_in_book": 2147,
+    "total_buckets_in_book": 2146,
     "buckets": [
       {
         "price": 4071.0,
@@ -5910,7 +5910,7 @@
       },
       {
         "price": 4100.0,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0219
       },
       {
@@ -6465,7 +6465,7 @@
       },
       {
         "price": 4200.0,
-        "long_count_percent": 0.1535,
+        "long_count_percent": 0.1536,
         "short_count_percent": 0.0439
       },
       {
@@ -6550,7 +6550,7 @@
       },
       {
         "price": 4210.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
@@ -6611,12 +6611,12 @@
       {
         "price": 4216.5,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4217.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4217.5,
@@ -6626,17 +6626,17 @@
       {
         "price": 4218.0,
         "long_count_percent": 0.0658,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4218.5,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4219.0,
         "long_count_percent": 0.0658,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4219.5,
@@ -6646,12 +6646,12 @@
       {
         "price": 4220.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4220.5,
-        "long_count_percent": 0.0877,
-        "short_count_percent": 0.1096
+        "long_count_percent": 0.0878,
+        "short_count_percent": 0.1097
       },
       {
         "price": 4221.0,
@@ -6665,7 +6665,7 @@
       },
       {
         "price": 4222.0,
-        "long_count_percent": 0.1096,
+        "long_count_percent": 0.1097,
         "short_count_percent": 0.0
       },
       {
@@ -6676,7 +6676,7 @@
       {
         "price": 4223.0,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4223.5,
@@ -6695,7 +6695,7 @@
       },
       {
         "price": 4225.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0658
       },
       {
@@ -6745,7 +6745,7 @@
       },
       {
         "price": 4230.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0
       },
       {
@@ -6780,17 +6780,17 @@
       },
       {
         "price": 4234.5,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0
       },
       {
         "price": 4235.0,
-        "long_count_percent": 0.1754,
-        "short_count_percent": 0.3289
+        "long_count_percent": 0.1756,
+        "short_count_percent": 0.3292
       },
       {
         "price": 4235.5,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0658
       },
       {
@@ -6805,13 +6805,13 @@
       },
       {
         "price": 4237.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
         "price": 4237.5,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4238.5,
@@ -6820,7 +6820,7 @@
       },
       {
         "price": 4239.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0
       },
       {
@@ -6830,7 +6830,7 @@
       },
       {
         "price": 4240.0,
-        "long_count_percent": 0.1973,
+        "long_count_percent": 0.1975,
         "short_count_percent": 0.0
       },
       {
@@ -6860,7 +6860,7 @@
       },
       {
         "price": 4243.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0439
       },
       {
@@ -6870,17 +6870,17 @@
       },
       {
         "price": 4244.0,
-        "long_count_percent": 0.1096,
-        "short_count_percent": 0.1535
+        "long_count_percent": 0.1097,
+        "short_count_percent": 0.1536
       },
       {
         "price": 4244.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4245.0,
-        "long_count_percent": 0.2193,
+        "long_count_percent": 0.2194,
         "short_count_percent": 0.0
       },
       {
@@ -6910,7 +6910,7 @@
       },
       {
         "price": 4250.0,
-        "long_count_percent": 0.1754,
+        "long_count_percent": 0.1756,
         "short_count_percent": 0.0439
       },
       {
@@ -6920,7 +6920,7 @@
       },
       {
         "price": 4251.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
@@ -6931,12 +6931,12 @@
       {
         "price": 4252.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4252.5,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4253.0,
@@ -6956,11 +6956,11 @@
       {
         "price": 4254.5,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4255.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0
       },
       {
@@ -6971,7 +6971,7 @@
       {
         "price": 4256.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4257.0,
@@ -6995,7 +6995,7 @@
       },
       {
         "price": 4260.0,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0219
       },
       {
@@ -7085,17 +7085,12 @@
       },
       {
         "price": 4271.0,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0
       },
       {
-        "price": 4272.0,
-        "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
-      },
-      {
         "price": 4272.5,
-        "long_count_percent": 0.2193,
+        "long_count_percent": 0.2194,
         "short_count_percent": 0.0
       },
       {
@@ -7115,7 +7110,7 @@
       },
       {
         "price": 4275.0,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0
       },
       {
@@ -7145,7 +7140,7 @@
       },
       {
         "price": 4278.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
@@ -7251,17 +7246,17 @@
       {
         "price": 4295.0,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4295.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.2193
+        "short_count_percent": 0.2194
       },
       {
         "price": 4296.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.2412
+        "short_count_percent": 0.2414
       },
       {
         "price": 4296.5,
@@ -7270,7 +7265,7 @@
       },
       {
         "price": 4298.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
@@ -7286,7 +7281,7 @@
       {
         "price": 4300.0,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4300.5,
@@ -7305,13 +7300,13 @@
       },
       {
         "price": 4302.0,
-        "long_count_percent": 0.285,
+        "long_count_percent": 0.2853,
         "short_count_percent": 0.0439
       },
       {
         "price": 4302.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4303.0,
@@ -7345,12 +7340,12 @@
       },
       {
         "price": 4308.0,
-        "long_count_percent": 0.0877,
-        "short_count_percent": 0.0877
+        "long_count_percent": 0.0878,
+        "short_count_percent": 0.0878
       },
       {
         "price": 4308.5,
-        "long_count_percent": 0.1754,
+        "long_count_percent": 0.1756,
         "short_count_percent": 0.0219
       },
       {
@@ -7365,8 +7360,8 @@
       },
       {
         "price": 4310.0,
-        "long_count_percent": 0.1316,
-        "short_count_percent": 0.0877
+        "long_count_percent": 0.1317,
+        "short_count_percent": 0.0878
       },
       {
         "price": 4310.5,
@@ -7375,7 +7370,7 @@
       },
       {
         "price": 4311.0,
-        "long_count_percent": 0.1096,
+        "long_count_percent": 0.1097,
         "short_count_percent": 0.0
       },
       {
@@ -7401,7 +7396,7 @@
       {
         "price": 4314.5,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4315.0,
@@ -7410,7 +7405,7 @@
       },
       {
         "price": 4315.5,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0658
       },
       {
@@ -7426,11 +7421,11 @@
       {
         "price": 4317.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4317.5,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0219
       },
       {
@@ -7445,7 +7440,7 @@
       },
       {
         "price": 4319.0,
-        "long_count_percent": 0.1096,
+        "long_count_percent": 0.1097,
         "short_count_percent": 0.0219
       },
       {
@@ -7455,8 +7450,8 @@
       },
       {
         "price": 4320.0,
-        "long_count_percent": 0.1096,
-        "short_count_percent": 0.2193
+        "long_count_percent": 0.1097,
+        "short_count_percent": 0.2194
       },
       {
         "price": 4320.5,
@@ -7466,7 +7461,7 @@
       {
         "price": 4321.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4322.0,
@@ -7476,7 +7471,7 @@
       {
         "price": 4322.5,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4323.0,
@@ -7496,12 +7491,12 @@
       {
         "price": 4324.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4325.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4325.5,
@@ -7511,17 +7506,17 @@
       {
         "price": 4326.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4326.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4327.0,
         "long_count_percent": 0.0658,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4327.5,
@@ -7531,12 +7526,12 @@
       {
         "price": 4328.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4328.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4329.0,
@@ -7546,12 +7541,12 @@
       {
         "price": 4330.0,
         "long_count_percent": 0.0658,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4330.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4331.0,
@@ -7591,7 +7586,7 @@
       {
         "price": 4335.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4335.5,
@@ -7721,7 +7716,7 @@
       {
         "price": 4350.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4351.0,
@@ -7771,7 +7766,7 @@
       {
         "price": 4355.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4356.0,
@@ -7796,7 +7791,7 @@
       {
         "price": 4358.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4358.5,
@@ -7806,7 +7801,7 @@
       {
         "price": 4359.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4359.5,
@@ -7826,7 +7821,7 @@
       {
         "price": 4361.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4361.5,
@@ -7836,7 +7831,7 @@
       {
         "price": 4362.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4362.5,
@@ -7846,7 +7841,7 @@
       {
         "price": 4363.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4363.5,
@@ -7856,7 +7851,7 @@
       {
         "price": 4364.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1535
+        "short_count_percent": 0.1536
       },
       {
         "price": 4364.5,
@@ -7876,7 +7871,7 @@
       {
         "price": 4366.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4366.5,
@@ -7886,7 +7881,7 @@
       {
         "price": 4367.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1535
+        "short_count_percent": 0.1536
       },
       {
         "price": 4367.5,
@@ -7896,7 +7891,7 @@
       {
         "price": 4368.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4368.5,
@@ -7906,22 +7901,22 @@
       {
         "price": 4369.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4369.5,
-        "long_count_percent": 0.1535,
-        "short_count_percent": 0.0877
+        "long_count_percent": 0.1536,
+        "short_count_percent": 0.0878
       },
       {
         "price": 4370.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4370.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4371.0,
@@ -7936,37 +7931,37 @@
       {
         "price": 4372.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4372.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4373.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4373.5,
         "long_count_percent": 0.0439,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4374.0,
         "long_count_percent": 0.0658,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4374.5,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4375.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1535
+        "short_count_percent": 0.1536
       },
       {
         "price": 4375.5,
@@ -7996,7 +7991,7 @@
       {
         "price": 4378.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1754
+        "short_count_percent": 0.1756
       },
       {
         "price": 4378.5,
@@ -8006,7 +8001,7 @@
       {
         "price": 4379.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4379.5,
@@ -8016,7 +8011,7 @@
       {
         "price": 4380.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4380.5,
@@ -8046,17 +8041,17 @@
       {
         "price": 4383.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4383.5,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4384.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4384.5,
@@ -8091,7 +8086,7 @@
       {
         "price": 4388.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4388.5,
@@ -8106,7 +8101,7 @@
       {
         "price": 4390.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1316
+        "short_count_percent": 0.1317
       },
       {
         "price": 4390.5,
@@ -8141,7 +8136,7 @@
       {
         "price": 4394.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4394.5,
@@ -8166,7 +8161,7 @@
       {
         "price": 4397.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.1535
+        "short_count_percent": 0.1536
       },
       {
         "price": 4398.0,
@@ -8186,7 +8181,7 @@
       {
         "price": 4400.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4400.5,
@@ -8195,7 +8190,7 @@
       },
       {
         "price": 4402.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0658
       },
       {
@@ -8226,7 +8221,7 @@
       {
         "price": 4405.0,
         "long_count_percent": 0.0,
-        "short_count_percent": 0.0877
+        "short_count_percent": 0.0878
       },
       {
         "price": 4405.5,
@@ -8251,7 +8246,7 @@
       {
         "price": 4408.5,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.1096
+        "short_count_percent": 0.1097
       },
       {
         "price": 4409.0,
@@ -8295,7 +8290,7 @@
       },
       {
         "price": 4415.0,
-        "long_count_percent": 0.0877,
+        "long_count_percent": 0.0878,
         "short_count_percent": 0.0439
       },
       {
@@ -8385,7 +8380,7 @@
       },
       {
         "price": 4439.5,
-        "long_count_percent": 0.1316,
+        "long_count_percent": 0.1317,
         "short_count_percent": 0.0
       },
       {
@@ -8531,7 +8526,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-09-26T15:40:00+00:00",
+    "time": "2026-09-26T18:40:00+00:00",
     "captured_price": 4284.97,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -11731,7 +11726,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-09-26T15:40:00+00:00",
+      "book_time": "2026-09-26T18:40:00+00:00",
       "reference_price": 4284.97,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -11932,11 +11927,11 @@
         },
         {
           "price": 4100.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0219,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.1097,
-          "ratio": 6.0091,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.1098,
+          "ratio": 6.0137,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -13375,11 +13370,11 @@
         },
         {
           "price": 4200.0,
-          "long_pct": 0.1535,
+          "long_pct": 0.1536,
           "short_pct": 0.0439,
-          "total_pct": 0.1974,
-          "net_imbalance": 0.1096,
-          "ratio": 3.4966,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1097,
+          "ratio": 3.4989,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -13596,11 +13591,11 @@
         },
         {
           "price": 4210.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -13753,10 +13748,10 @@
         {
           "price": 4216.5,
           "long_pct": 0.0439,
-          "short_pct": 0.0877,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.0438,
-          "ratio": 1.9977,
+          "short_pct": 0.0878,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.0439,
+          "ratio": 2.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13766,10 +13761,10 @@
         {
           "price": 4217.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -13792,10 +13787,10 @@
         {
           "price": 4218.0,
           "long_pct": 0.0658,
-          "short_pct": 0.1754,
-          "total_pct": 0.2412,
-          "net_imbalance": -0.1096,
-          "ratio": 2.6657,
+          "short_pct": 0.1756,
+          "total_pct": 0.2414,
+          "net_imbalance": -0.1098,
+          "ratio": 2.6687,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13805,10 +13800,10 @@
         {
           "price": 4218.5,
           "long_pct": 0.0439,
-          "short_pct": 0.1096,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.0657,
-          "ratio": 2.4966,
+          "short_pct": 0.1097,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.0658,
+          "ratio": 2.4989,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13818,10 +13813,10 @@
         {
           "price": 4219.0,
           "long_pct": 0.0658,
-          "short_pct": 0.1316,
-          "total_pct": 0.1974,
-          "net_imbalance": -0.0658,
-          "ratio": 2.0,
+          "short_pct": 0.1317,
+          "total_pct": 0.1975,
+          "net_imbalance": -0.0659,
+          "ratio": 2.0015,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13844,10 +13839,10 @@
         {
           "price": 4220.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -13856,11 +13851,11 @@
         },
         {
           "price": 4220.5,
-          "long_pct": 0.0877,
-          "short_pct": 0.1096,
-          "total_pct": 0.1973,
+          "long_pct": 0.0878,
+          "short_pct": 0.1097,
+          "total_pct": 0.1975,
           "net_imbalance": -0.0219,
-          "ratio": 1.2497,
+          "ratio": 1.2494,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13895,10 +13890,10 @@
         },
         {
           "price": 4222.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.1096,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.1097,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -13922,10 +13917,10 @@
         {
           "price": 4223.0,
           "long_pct": 0.0439,
-          "short_pct": 0.1096,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.0657,
-          "ratio": 2.4966,
+          "short_pct": 0.1097,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.0658,
+          "ratio": 2.4989,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -13973,11 +13968,11 @@
         },
         {
           "price": 4225.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0658,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.0219,
-          "ratio": 1.3328,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.022,
+          "ratio": 1.3343,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -14103,10 +14098,10 @@
         },
         {
           "price": 4230.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14194,10 +14189,10 @@
         },
         {
           "price": 4234.5,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14207,11 +14202,11 @@
         },
         {
           "price": 4235.0,
-          "long_pct": 0.1754,
-          "short_pct": 0.3289,
-          "total_pct": 0.5043,
-          "net_imbalance": -0.1535,
-          "ratio": 1.8751,
+          "long_pct": 0.1756,
+          "short_pct": 0.3292,
+          "total_pct": 0.5048,
+          "net_imbalance": -0.1536,
+          "ratio": 1.8747,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -14220,11 +14215,11 @@
         },
         {
           "price": 4235.5,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0658,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.0219,
-          "ratio": 1.3328,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.022,
+          "ratio": 1.3343,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -14259,11 +14254,11 @@
         },
         {
           "price": 4237.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -14273,10 +14268,10 @@
         {
           "price": 4237.5,
           "long_pct": 0.0439,
-          "short_pct": 0.0877,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.0438,
-          "ratio": 1.9977,
+          "short_pct": 0.0878,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.0439,
+          "ratio": 2.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -14298,10 +14293,10 @@
         },
         {
           "price": 4239.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14324,10 +14319,10 @@
         },
         {
           "price": 4240.0,
-          "long_pct": 0.1973,
+          "long_pct": 0.1975,
           "short_pct": 0.0,
-          "total_pct": 0.1973,
-          "net_imbalance": 0.1973,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1975,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14402,11 +14397,11 @@
         },
         {
           "price": 4243.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0439,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.0438,
-          "ratio": 1.9977,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.0439,
+          "ratio": 2.0,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -14428,11 +14423,11 @@
         },
         {
           "price": 4244.0,
-          "long_pct": 0.1096,
-          "short_pct": 0.1535,
-          "total_pct": 0.2631,
+          "long_pct": 0.1097,
+          "short_pct": 0.1536,
+          "total_pct": 0.2633,
           "net_imbalance": -0.0439,
-          "ratio": 1.4005,
+          "ratio": 1.4002,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -14442,9 +14437,9 @@
         {
           "price": 4244.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -14454,10 +14449,10 @@
         },
         {
           "price": 4245.0,
-          "long_pct": 0.2193,
+          "long_pct": 0.2194,
           "short_pct": 0.0,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.2193,
+          "total_pct": 0.2194,
+          "net_imbalance": 0.2194,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14532,11 +14527,11 @@
         },
         {
           "price": 4250.0,
-          "long_pct": 0.1754,
+          "long_pct": 0.1756,
           "short_pct": 0.0439,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.1315,
-          "ratio": 3.9954,
+          "total_pct": 0.2195,
+          "net_imbalance": 0.1317,
+          "ratio": 4.0,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -14558,11 +14553,11 @@
         },
         {
           "price": 4251.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -14585,9 +14580,9 @@
         {
           "price": 4252.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -14598,10 +14593,10 @@
         {
           "price": 4252.5,
           "long_pct": 0.0439,
-          "short_pct": 0.0877,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.0438,
-          "ratio": 1.9977,
+          "short_pct": 0.0878,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.0439,
+          "ratio": 2.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -14650,10 +14645,10 @@
         {
           "price": 4254.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1754,
-          "total_pct": 0.1973,
-          "net_imbalance": -0.1535,
-          "ratio": 8.0091,
+          "short_pct": 0.1756,
+          "total_pct": 0.1975,
+          "net_imbalance": -0.1537,
+          "ratio": 8.0183,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -14662,10 +14657,10 @@
         },
         {
           "price": 4255.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14689,9 +14684,9 @@
         {
           "price": 4256.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -14753,11 +14748,11 @@
         },
         {
           "price": 4260.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0219,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.1097,
-          "ratio": 6.0091,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.1098,
+          "ratio": 6.0137,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -14987,10 +14982,10 @@
         },
         {
           "price": 4271.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -14999,24 +14994,11 @@
           "distance_pct": -0.326
         },
         {
-          "price": 4272.0,
-          "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -12.97,
-          "distance_pct": -0.3027
-        },
-        {
           "price": 4272.5,
-          "long_pct": 0.2193,
+          "long_pct": 0.2194,
           "short_pct": 0.0,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.2193,
+          "total_pct": 0.2194,
+          "net_imbalance": 0.2194,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -15065,10 +15047,10 @@
         },
         {
           "price": 4275.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -15143,11 +15125,11 @@
         },
         {
           "price": 4278.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15417,10 +15399,10 @@
         {
           "price": 4295.0,
           "long_pct": 0.0439,
-          "short_pct": 0.1754,
-          "total_pct": 0.2193,
-          "net_imbalance": -0.1315,
-          "ratio": 3.9954,
+          "short_pct": 0.1756,
+          "total_pct": 0.2195,
+          "net_imbalance": -0.1317,
+          "ratio": 4.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -15430,9 +15412,9 @@
         {
           "price": 4295.5,
           "long_pct": 0.0,
-          "short_pct": 0.2193,
-          "total_pct": 0.2193,
-          "net_imbalance": -0.2193,
+          "short_pct": 0.2194,
+          "total_pct": 0.2194,
+          "net_imbalance": -0.2194,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -15443,9 +15425,9 @@
         {
           "price": 4296.0,
           "long_pct": 0.0,
-          "short_pct": 0.2412,
-          "total_pct": 0.2412,
-          "net_imbalance": -0.2412,
+          "short_pct": 0.2414,
+          "total_pct": 0.2414,
+          "net_imbalance": -0.2414,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -15468,11 +15450,11 @@
         },
         {
           "price": 4298.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15508,10 +15490,10 @@
         {
           "price": 4300.0,
           "long_pct": 0.0439,
-          "short_pct": 0.0877,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.0438,
-          "ratio": 1.9977,
+          "short_pct": 0.0878,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.0439,
+          "ratio": 2.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -15559,11 +15541,11 @@
         },
         {
           "price": 4302.0,
-          "long_pct": 0.285,
+          "long_pct": 0.2853,
           "short_pct": 0.0439,
-          "total_pct": 0.3289,
-          "net_imbalance": 0.2411,
-          "ratio": 6.492,
+          "total_pct": 0.3292,
+          "net_imbalance": 0.2414,
+          "ratio": 6.4989,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15573,9 +15555,9 @@
         {
           "price": 4302.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -15663,9 +15645,9 @@
         },
         {
           "price": 4308.0,
-          "long_pct": 0.0877,
-          "short_pct": 0.0877,
-          "total_pct": 0.1754,
+          "long_pct": 0.0878,
+          "short_pct": 0.0878,
+          "total_pct": 0.1756,
           "net_imbalance": 0.0,
           "ratio": 1.0,
           "dominant_side": "balanced",
@@ -15676,11 +15658,11 @@
         },
         {
           "price": 4308.5,
-          "long_pct": 0.1754,
+          "long_pct": 0.1756,
           "short_pct": 0.0219,
-          "total_pct": 0.1973,
-          "net_imbalance": 0.1535,
-          "ratio": 8.0091,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1537,
+          "ratio": 8.0183,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15715,11 +15697,11 @@
         },
         {
           "price": 4310.0,
-          "long_pct": 0.1316,
-          "short_pct": 0.0877,
-          "total_pct": 0.2193,
+          "long_pct": 0.1317,
+          "short_pct": 0.0878,
+          "total_pct": 0.2195,
           "net_imbalance": 0.0439,
-          "ratio": 1.5006,
+          "ratio": 1.5,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -15741,10 +15723,10 @@
         },
         {
           "price": 4311.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.1096,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.1097,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -15807,10 +15789,10 @@
         {
           "price": 4314.5,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -15832,11 +15814,11 @@
         },
         {
           "price": 4315.5,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0658,
-          "total_pct": 0.1974,
-          "net_imbalance": 0.0658,
-          "ratio": 2.0,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.0659,
+          "ratio": 2.0015,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -15872,10 +15854,10 @@
         {
           "price": 4317.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -15884,11 +15866,11 @@
         },
         {
           "price": 4317.5,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15923,11 +15905,11 @@
         },
         {
           "price": 4319.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0219,
-          "total_pct": 0.1315,
-          "net_imbalance": 0.0877,
-          "ratio": 5.0046,
+          "total_pct": 0.1316,
+          "net_imbalance": 0.0878,
+          "ratio": 5.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -15949,11 +15931,11 @@
         },
         {
           "price": 4320.0,
-          "long_pct": 0.1096,
-          "short_pct": 0.2193,
-          "total_pct": 0.3289,
+          "long_pct": 0.1097,
+          "short_pct": 0.2194,
+          "total_pct": 0.3291,
           "net_imbalance": -0.1097,
-          "ratio": 2.0009,
+          "ratio": 2.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -15976,10 +15958,10 @@
         {
           "price": 4321.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1316,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1097,
-          "ratio": 6.0091,
+          "short_pct": 0.1317,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1098,
+          "ratio": 6.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -16002,10 +15984,10 @@
         {
           "price": 4322.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -16054,9 +16036,9 @@
         {
           "price": 4324.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16067,10 +16049,10 @@
         {
           "price": 4325.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -16093,9 +16075,9 @@
         {
           "price": 4326.0,
           "long_pct": 0.0,
-          "short_pct": 0.1754,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1754,
+          "short_pct": 0.1756,
+          "total_pct": 0.1756,
+          "net_imbalance": -0.1756,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16106,9 +16088,9 @@
         {
           "price": 4326.5,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16119,10 +16101,10 @@
         {
           "price": 4327.0,
           "long_pct": 0.0658,
-          "short_pct": 0.1754,
-          "total_pct": 0.2412,
-          "net_imbalance": -0.1096,
-          "ratio": 2.6657,
+          "short_pct": 0.1756,
+          "total_pct": 0.2414,
+          "net_imbalance": -0.1098,
+          "ratio": 2.6687,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -16145,9 +16127,9 @@
         {
           "price": 4328.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16158,9 +16140,9 @@
         {
           "price": 4328.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16184,10 +16166,10 @@
         {
           "price": 4330.0,
           "long_pct": 0.0658,
-          "short_pct": 0.0877,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.0219,
-          "ratio": 1.3328,
+          "short_pct": 0.0878,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.022,
+          "ratio": 1.3343,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -16197,9 +16179,9 @@
         {
           "price": 4330.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16301,9 +16283,9 @@
         {
           "price": 4335.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16639,9 +16621,9 @@
         {
           "price": 4350.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16769,9 +16751,9 @@
         {
           "price": 4355.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16834,10 +16816,10 @@
         {
           "price": 4358.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -16860,9 +16842,9 @@
         {
           "price": 4359.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16912,9 +16894,9 @@
         {
           "price": 4361.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16938,9 +16920,9 @@
         {
           "price": 4362.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16964,9 +16946,9 @@
         {
           "price": 4363.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -16990,10 +16972,10 @@
         {
           "price": 4364.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1535,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1316,
-          "ratio": 7.0091,
+          "short_pct": 0.1536,
+          "total_pct": 0.1755,
+          "net_imbalance": -0.1317,
+          "ratio": 7.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17042,9 +17024,9 @@
         {
           "price": 4366.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17068,9 +17050,9 @@
         {
           "price": 4367.0,
           "long_pct": 0.0,
-          "short_pct": 0.1535,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1535,
+          "short_pct": 0.1536,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1536,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17094,9 +17076,9 @@
         {
           "price": 4368.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17120,9 +17102,9 @@
         {
           "price": 4369.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17132,11 +17114,11 @@
         },
         {
           "price": 4369.5,
-          "long_pct": 0.1535,
-          "short_pct": 0.0877,
-          "total_pct": 0.2412,
+          "long_pct": 0.1536,
+          "short_pct": 0.0878,
+          "total_pct": 0.2414,
           "net_imbalance": 0.0658,
-          "ratio": 1.7503,
+          "ratio": 1.7494,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -17146,10 +17128,10 @@
         {
           "price": 4370.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17159,9 +17141,9 @@
         {
           "price": 4370.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17198,9 +17180,9 @@
         {
           "price": 4372.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17211,9 +17193,9 @@
         {
           "price": 4372.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17224,9 +17206,9 @@
         {
           "price": 4373.0,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17237,10 +17219,10 @@
         {
           "price": 4373.5,
           "long_pct": 0.0439,
-          "short_pct": 0.1096,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.0657,
-          "ratio": 2.4966,
+          "short_pct": 0.1097,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.0658,
+          "ratio": 2.4989,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -17250,10 +17232,10 @@
         {
           "price": 4374.0,
           "long_pct": 0.0658,
-          "short_pct": 0.1096,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.0438,
-          "ratio": 1.6657,
+          "short_pct": 0.1097,
+          "total_pct": 0.1755,
+          "net_imbalance": -0.0439,
+          "ratio": 1.6672,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -17263,9 +17245,9 @@
         {
           "price": 4374.5,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17276,10 +17258,10 @@
         {
           "price": 4375.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1535,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1316,
-          "ratio": 7.0091,
+          "short_pct": 0.1536,
+          "total_pct": 0.1755,
+          "net_imbalance": -0.1317,
+          "ratio": 7.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17354,10 +17336,10 @@
         {
           "price": 4378.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1754,
-          "total_pct": 0.1973,
-          "net_imbalance": -0.1535,
-          "ratio": 8.0091,
+          "short_pct": 0.1756,
+          "total_pct": 0.1975,
+          "net_imbalance": -0.1537,
+          "ratio": 8.0183,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17380,9 +17362,9 @@
         {
           "price": 4379.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17406,10 +17388,10 @@
         {
           "price": 4380.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17484,10 +17466,10 @@
         {
           "price": 4383.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1316,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1097,
-          "ratio": 6.0091,
+          "short_pct": 0.1317,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1098,
+          "ratio": 6.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17497,10 +17479,10 @@
         {
           "price": 4383.5,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17510,10 +17492,10 @@
         {
           "price": 4384.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17601,10 +17583,10 @@
         {
           "price": 4388.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17640,9 +17622,9 @@
         {
           "price": 4390.0,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17731,9 +17713,9 @@
         {
           "price": 4394.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17796,9 +17778,9 @@
         {
           "price": 4397.0,
           "long_pct": 0.0,
-          "short_pct": 0.1535,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1535,
+          "short_pct": 0.1536,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1536,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -17848,10 +17830,10 @@
         {
           "price": 4400.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -17873,11 +17855,11 @@
         },
         {
           "price": 4402.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0658,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.0219,
-          "ratio": 1.3328,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.022,
+          "ratio": 1.3343,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -17952,9 +17934,9 @@
         {
           "price": 4405.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -18017,10 +17999,10 @@
         {
           "price": 4408.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -18133,11 +18115,11 @@
         },
         {
           "price": 4415.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0439,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.0438,
-          "ratio": 1.9977,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.0439,
+          "ratio": 2.0,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -18367,10 +18349,10 @@
         },
         {
           "price": 4439.5,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -18941,11 +18923,11 @@
         },
         {
           "price": 4100.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0219,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.1097,
-          "ratio": 6.0091,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.1098,
+          "ratio": 6.0137,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -20254,11 +20236,11 @@
         },
         {
           "price": 4200.0,
-          "long_pct": 0.1535,
+          "long_pct": 0.1536,
           "short_pct": 0.0439,
-          "total_pct": 0.1974,
-          "net_imbalance": 0.1096,
-          "ratio": 3.4966,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1097,
+          "ratio": 3.4989,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -20449,11 +20431,11 @@
         },
         {
           "price": 4210.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -20541,10 +20523,10 @@
         {
           "price": 4217.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -20567,10 +20549,10 @@
         {
           "price": 4220.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -20592,10 +20574,10 @@
         },
         {
           "price": 4222.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.1096,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.1097,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -20748,10 +20730,10 @@
         },
         {
           "price": 4230.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -20813,10 +20795,10 @@
         },
         {
           "price": 4234.5,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -20826,11 +20808,11 @@
         },
         {
           "price": 4237.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -20839,10 +20821,10 @@
         },
         {
           "price": 4239.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -20865,10 +20847,10 @@
         },
         {
           "price": 4240.0,
-          "long_pct": 0.1973,
+          "long_pct": 0.1975,
           "short_pct": 0.0,
-          "total_pct": 0.1973,
-          "net_imbalance": 0.1973,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1975,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -20944,9 +20926,9 @@
         {
           "price": 4244.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -20956,10 +20938,10 @@
         },
         {
           "price": 4245.0,
-          "long_pct": 0.2193,
+          "long_pct": 0.2194,
           "short_pct": 0.0,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.2193,
+          "total_pct": 0.2194,
+          "net_imbalance": 0.2194,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -21034,11 +21016,11 @@
         },
         {
           "price": 4250.0,
-          "long_pct": 0.1754,
+          "long_pct": 0.1756,
           "short_pct": 0.0439,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.1315,
-          "ratio": 3.9954,
+          "total_pct": 0.2195,
+          "net_imbalance": 0.1317,
+          "ratio": 4.0,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21047,11 +21029,11 @@
         },
         {
           "price": 4251.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21061,9 +21043,9 @@
         {
           "price": 4252.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -21087,10 +21069,10 @@
         {
           "price": 4254.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1754,
-          "total_pct": 0.1973,
-          "net_imbalance": -0.1535,
-          "ratio": 8.0091,
+          "short_pct": 0.1756,
+          "total_pct": 0.1975,
+          "net_imbalance": -0.1537,
+          "ratio": 8.0183,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -21099,10 +21081,10 @@
         },
         {
           "price": 4255.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0,
-          "total_pct": 0.0877,
-          "net_imbalance": 0.0877,
+          "total_pct": 0.0878,
+          "net_imbalance": 0.0878,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -21113,9 +21095,9 @@
         {
           "price": 4256.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -21164,11 +21146,11 @@
         },
         {
           "price": 4260.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0219,
-          "total_pct": 0.1535,
-          "net_imbalance": 0.1097,
-          "ratio": 6.0091,
+          "total_pct": 0.1536,
+          "net_imbalance": 0.1098,
+          "ratio": 6.0137,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21385,10 +21367,10 @@
         },
         {
           "price": 4271.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -21397,24 +21379,11 @@
           "distance_pct": -0.326
         },
         {
-          "price": 4272.0,
-          "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": -12.97,
-          "distance_pct": -0.3027
-        },
-        {
           "price": 4272.5,
-          "long_pct": 0.2193,
+          "long_pct": 0.2194,
           "short_pct": 0.0,
-          "total_pct": 0.2193,
-          "net_imbalance": 0.2193,
+          "total_pct": 0.2194,
+          "net_imbalance": 0.2194,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -21437,10 +21406,10 @@
         },
         {
           "price": 4275.0,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -21502,11 +21471,11 @@
         },
         {
           "price": 4278.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21750,10 +21719,10 @@
         {
           "price": 4295.0,
           "long_pct": 0.0439,
-          "short_pct": 0.1754,
-          "total_pct": 0.2193,
-          "net_imbalance": -0.1315,
-          "ratio": 3.9954,
+          "short_pct": 0.1756,
+          "total_pct": 0.2195,
+          "net_imbalance": -0.1317,
+          "ratio": 4.0,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -21763,9 +21732,9 @@
         {
           "price": 4295.5,
           "long_pct": 0.0,
-          "short_pct": 0.2193,
-          "total_pct": 0.2193,
-          "net_imbalance": -0.2193,
+          "short_pct": 0.2194,
+          "total_pct": 0.2194,
+          "net_imbalance": -0.2194,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -21776,9 +21745,9 @@
         {
           "price": 4296.0,
           "long_pct": 0.0,
-          "short_pct": 0.2412,
-          "total_pct": 0.2412,
-          "net_imbalance": -0.2412,
+          "short_pct": 0.2414,
+          "total_pct": 0.2414,
+          "net_imbalance": -0.2414,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -21801,11 +21770,11 @@
         },
         {
           "price": 4298.0,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21879,11 +21848,11 @@
         },
         {
           "price": 4302.0,
-          "long_pct": 0.285,
+          "long_pct": 0.2853,
           "short_pct": 0.0439,
-          "total_pct": 0.3289,
-          "net_imbalance": 0.2411,
-          "ratio": 6.492,
+          "total_pct": 0.3292,
+          "net_imbalance": 0.2414,
+          "ratio": 6.4989,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -21893,9 +21862,9 @@
         {
           "price": 4302.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -21970,11 +21939,11 @@
         },
         {
           "price": 4308.5,
-          "long_pct": 0.1754,
+          "long_pct": 0.1756,
           "short_pct": 0.0219,
-          "total_pct": 0.1973,
-          "net_imbalance": 0.1535,
-          "ratio": 8.0091,
+          "total_pct": 0.1975,
+          "net_imbalance": 0.1537,
+          "ratio": 8.0183,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -22022,10 +21991,10 @@
         },
         {
           "price": 4311.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.1096,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.1097,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -22049,10 +22018,10 @@
         {
           "price": 4314.5,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22062,10 +22031,10 @@
         {
           "price": 4317.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22074,11 +22043,11 @@
         },
         {
           "price": 4317.5,
-          "long_pct": 0.0877,
+          "long_pct": 0.0878,
           "short_pct": 0.0219,
-          "total_pct": 0.1096,
-          "net_imbalance": 0.0658,
-          "ratio": 4.0046,
+          "total_pct": 0.1097,
+          "net_imbalance": 0.0659,
+          "ratio": 4.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -22113,11 +22082,11 @@
         },
         {
           "price": 4319.0,
-          "long_pct": 0.1096,
+          "long_pct": 0.1097,
           "short_pct": 0.0219,
-          "total_pct": 0.1315,
-          "net_imbalance": 0.0877,
-          "ratio": 5.0046,
+          "total_pct": 0.1316,
+          "net_imbalance": 0.0878,
+          "ratio": 5.0091,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": true,
@@ -22140,10 +22109,10 @@
         {
           "price": 4321.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1316,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1097,
-          "ratio": 6.0091,
+          "short_pct": 0.1317,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1098,
+          "ratio": 6.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22153,10 +22122,10 @@
         {
           "price": 4322.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22192,9 +22161,9 @@
         {
           "price": 4324.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22205,10 +22174,10 @@
         {
           "price": 4325.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22231,9 +22200,9 @@
         {
           "price": 4326.0,
           "long_pct": 0.0,
-          "short_pct": 0.1754,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1754,
+          "short_pct": 0.1756,
+          "total_pct": 0.1756,
+          "net_imbalance": -0.1756,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22244,9 +22213,9 @@
         {
           "price": 4326.5,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22270,9 +22239,9 @@
         {
           "price": 4328.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22283,9 +22252,9 @@
         {
           "price": 4328.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22296,9 +22265,9 @@
         {
           "price": 4330.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22387,9 +22356,9 @@
         {
           "price": 4335.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22634,9 +22603,9 @@
         {
           "price": 4350.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22712,9 +22681,9 @@
         {
           "price": 4355.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22764,10 +22733,10 @@
         {
           "price": 4358.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22777,9 +22746,9 @@
         {
           "price": 4359.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22829,9 +22798,9 @@
         {
           "price": 4361.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22855,9 +22824,9 @@
         {
           "price": 4362.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22881,9 +22850,9 @@
         {
           "price": 4363.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22907,10 +22876,10 @@
         {
           "price": 4364.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1535,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1316,
-          "ratio": 7.0091,
+          "short_pct": 0.1536,
+          "total_pct": 0.1755,
+          "net_imbalance": -0.1317,
+          "ratio": 7.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -22946,9 +22915,9 @@
         {
           "price": 4366.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22972,9 +22941,9 @@
         {
           "price": 4367.0,
           "long_pct": 0.0,
-          "short_pct": 0.1535,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1535,
+          "short_pct": 0.1536,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1536,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -22998,9 +22967,9 @@
         {
           "price": 4368.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23011,9 +22980,9 @@
         {
           "price": 4369.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23024,10 +22993,10 @@
         {
           "price": 4370.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23037,9 +23006,9 @@
         {
           "price": 4370.5,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23050,9 +23019,9 @@
         {
           "price": 4372.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23063,9 +23032,9 @@
         {
           "price": 4372.5,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23076,9 +23045,9 @@
         {
           "price": 4373.0,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23089,9 +23058,9 @@
         {
           "price": 4374.5,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23102,10 +23071,10 @@
         {
           "price": 4375.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1535,
-          "total_pct": 0.1754,
-          "net_imbalance": -0.1316,
-          "ratio": 7.0091,
+          "short_pct": 0.1536,
+          "total_pct": 0.1755,
+          "net_imbalance": -0.1317,
+          "ratio": 7.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23141,10 +23110,10 @@
         {
           "price": 4378.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1754,
-          "total_pct": 0.1973,
-          "net_imbalance": -0.1535,
-          "ratio": 8.0091,
+          "short_pct": 0.1756,
+          "total_pct": 0.1975,
+          "net_imbalance": -0.1537,
+          "ratio": 8.0183,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23167,9 +23136,9 @@
         {
           "price": 4379.0,
           "long_pct": 0.0,
-          "short_pct": 0.1096,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.1096,
+          "short_pct": 0.1097,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.1097,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23193,10 +23162,10 @@
         {
           "price": 4380.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23258,10 +23227,10 @@
         {
           "price": 4383.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1316,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1097,
-          "ratio": 6.0091,
+          "short_pct": 0.1317,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1098,
+          "ratio": 6.0137,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23271,10 +23240,10 @@
         {
           "price": 4383.5,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23284,10 +23253,10 @@
         {
           "price": 4384.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23349,10 +23318,10 @@
         {
           "price": 4388.0,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23388,9 +23357,9 @@
         {
           "price": 4390.0,
           "long_pct": 0.0,
-          "short_pct": 0.1316,
-          "total_pct": 0.1316,
-          "net_imbalance": -0.1316,
+          "short_pct": 0.1317,
+          "total_pct": 0.1317,
+          "net_imbalance": -0.1317,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23479,9 +23448,9 @@
         {
           "price": 4394.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23518,9 +23487,9 @@
         {
           "price": 4397.0,
           "long_pct": 0.0,
-          "short_pct": 0.1535,
-          "total_pct": 0.1535,
-          "net_imbalance": -0.1535,
+          "short_pct": 0.1536,
+          "total_pct": 0.1536,
+          "net_imbalance": -0.1536,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23557,10 +23526,10 @@
         {
           "price": 4400.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0877,
-          "total_pct": 0.1096,
-          "net_imbalance": -0.0658,
-          "ratio": 4.0046,
+          "short_pct": 0.0878,
+          "total_pct": 0.1097,
+          "net_imbalance": -0.0659,
+          "ratio": 4.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23622,9 +23591,9 @@
         {
           "price": 4405.0,
           "long_pct": 0.0,
-          "short_pct": 0.0877,
-          "total_pct": 0.0877,
-          "net_imbalance": -0.0877,
+          "short_pct": 0.0878,
+          "total_pct": 0.0878,
+          "net_imbalance": -0.0878,
           "ratio": null,
           "dominant_side": "short",
           "one_sided": true,
@@ -23687,10 +23656,10 @@
         {
           "price": 4408.5,
           "long_pct": 0.0219,
-          "short_pct": 0.1096,
-          "total_pct": 0.1315,
-          "net_imbalance": -0.0877,
-          "ratio": 5.0046,
+          "short_pct": 0.1097,
+          "total_pct": 0.1316,
+          "net_imbalance": -0.0878,
+          "ratio": 5.0091,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": true,
@@ -23959,10 +23928,10 @@
         },
         {
           "price": 4439.5,
-          "long_pct": 0.1316,
+          "long_pct": 0.1317,
           "short_pct": 0.0,
-          "total_pct": 0.1316,
-          "net_imbalance": 0.1316,
+          "total_pct": 0.1317,
+          "net_imbalance": 0.1317,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -24323,17 +24292,17 @@
         }
       ],
       "summary": {
-        "bucket_count": 539,
-        "flagged_count": 429,
-        "long_pct_above_price": 5.2392,
-        "short_pct_above_price": 13.0685,
-        "long_pct_below_price": 9.8446,
-        "short_pct_below_price": 4.9112,
-        "net_imbalance_total": -2.8959
+        "bucket_count": 538,
+        "flagged_count": 428,
+        "long_pct_above_price": 5.2409,
+        "short_pct_above_price": 13.0747,
+        "long_pct_below_price": 9.8473,
+        "short_pct_below_price": 4.8255,
+        "net_imbalance_total": -2.812
       }
     },
     "position_imbalance": {
-      "book_time": "2026-09-26T15:40:00+00:00",
+      "book_time": "2026-09-26T18:40:00+00:00",
       "reference_price": 4284.97,
       "ratio_threshold": 3.0,
       "matrix": [
