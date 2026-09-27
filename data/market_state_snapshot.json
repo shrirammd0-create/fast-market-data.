@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-27T14:49:53.513014+00:00",
+  "generated_at": "2026-09-27T18:53:02.436629+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,7 +5827,7 @@
     ]
   },
   "order_book": {
-    "time": "2026-09-27T14:40:00+00:00",
+    "time": "2026-09-27T18:40:00+00:00",
     "captured_price": 4284.97,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -7110,7 +7110,7 @@
       },
       {
         "price": 4275.0,
-        "long_count_percent": 0.1317,
+        "long_count_percent": 0.1756,
         "short_count_percent": 0.0
       },
       {
@@ -7396,7 +7396,7 @@
       {
         "price": 4314.0,
         "long_count_percent": 0.0219,
-        "short_count_percent": 0.0439
+        "short_count_percent": 0.0219
       },
       {
         "price": 4314.5,
@@ -8195,7 +8195,7 @@
       },
       {
         "price": 4402.0,
-        "long_count_percent": 0.0878,
+        "long_count_percent": 0.0658,
         "short_count_percent": 0.0658
       },
       {
@@ -8531,7 +8531,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-09-27T14:40:00+00:00",
+    "time": "2026-09-27T18:40:00+00:00",
     "captured_price": 4284.97,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -11731,7 +11731,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-09-27T14:40:00+00:00",
+      "book_time": "2026-09-27T18:40:00+00:00",
       "reference_price": 4284.97,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -15052,10 +15052,10 @@
         },
         {
           "price": 4275.0,
-          "long_pct": 0.1317,
+          "long_pct": 0.1756,
           "short_pct": 0.0,
-          "total_pct": 0.1317,
-          "net_imbalance": 0.1317,
+          "total_pct": 0.1756,
+          "net_imbalance": 0.1756,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -15794,11 +15794,11 @@
         {
           "price": 4314.0,
           "long_pct": 0.0219,
-          "short_pct": 0.0439,
-          "total_pct": 0.0658,
-          "net_imbalance": -0.022,
-          "ratio": 2.0046,
-          "dominant_side": "short",
+          "short_pct": 0.0219,
+          "total_pct": 0.0438,
+          "net_imbalance": 0.0,
+          "ratio": 1.0,
+          "dominant_side": "balanced",
           "one_sided": false,
           "flagged": false,
           "distance_from_price": 29.03,
@@ -17873,12 +17873,12 @@
         },
         {
           "price": 4402.0,
-          "long_pct": 0.0878,
+          "long_pct": 0.0658,
           "short_pct": 0.0658,
-          "total_pct": 0.1536,
-          "net_imbalance": 0.022,
-          "ratio": 1.3343,
-          "dominant_side": "long",
+          "total_pct": 0.1316,
+          "net_imbalance": 0.0,
+          "ratio": 1.0,
+          "dominant_side": "balanced",
           "one_sided": false,
           "flagged": false,
           "distance_from_price": 117.03,
@@ -21424,10 +21424,10 @@
         },
         {
           "price": 4275.0,
-          "long_pct": 0.1317,
+          "long_pct": 0.1756,
           "short_pct": 0.0,
-          "total_pct": 0.1317,
-          "net_imbalance": 0.1317,
+          "total_pct": 0.1756,
+          "net_imbalance": 0.1756,
           "ratio": null,
           "dominant_side": "long",
           "one_sided": true,
@@ -24338,15 +24338,15 @@
       "summary": {
         "bucket_count": 539,
         "flagged_count": 430,
-        "long_pct_above_price": 5.2628,
-        "short_pct_above_price": 13.0528,
-        "long_pct_below_price": 9.8473,
+        "long_pct_above_price": 5.2408,
+        "short_pct_above_price": 13.0308,
+        "long_pct_below_price": 9.8912,
         "short_pct_below_price": 4.8255,
-        "net_imbalance_total": -2.7682
+        "net_imbalance_total": -2.7243
       }
     },
     "position_imbalance": {
-      "book_time": "2026-09-27T14:40:00+00:00",
+      "book_time": "2026-09-27T18:40:00+00:00",
       "reference_price": 4284.97,
       "ratio_threshold": 3.0,
       "matrix": [
