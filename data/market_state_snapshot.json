@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-02T23:56:26.054570+00:00",
+  "generated_at": "2026-10-03T04:09:02.599886+00:00",
   "instrument": "XAU_USD",
   "source": {
     "provider": "oanda_v20",
@@ -5827,11 +5827,11 @@
     ]
   },
   "order_book": {
-    "time": "2026-10-02T23:40:00+00:00",
+    "time": "2026-10-03T04:00:00+00:00",
     "captured_price": 4140.52,
     "bucket_width": 0.5,
     "window_pct": 5.0,
-    "total_buckets_in_book": 2270,
+    "total_buckets_in_book": 2269,
     "buckets": [
       {
         "price": 3933.5,
@@ -7035,7 +7035,7 @@
       },
       {
         "price": 4100.0,
-        "long_count_percent": 0.3095,
+        "long_count_percent": 0.3096,
         "short_count_percent": 0.1548
       },
       {
@@ -7285,7 +7285,7 @@
       },
       {
         "price": 4125.0,
-        "long_count_percent": 0.3095,
+        "long_count_percent": 0.3096,
         "short_count_percent": 0.3676
       },
       {
@@ -8499,11 +8499,6 @@
         "short_count_percent": 0.0
       },
       {
-        "price": 4283.5,
-        "long_count_percent": 0.0,
-        "short_count_percent": 0.0193
-      },
-      {
         "price": 4284.5,
         "long_count_percent": 0.0193,
         "short_count_percent": 0.0
@@ -8721,7 +8716,7 @@
     ]
   },
   "position_book": {
-    "time": "2026-10-02T23:40:00+00:00",
+    "time": "2026-10-03T04:00:00+00:00",
     "captured_price": 4140.52,
     "bucket_width": 0.5,
     "window_pct": 5.0,
@@ -11741,7 +11736,7 @@
   },
   "analytics": {
     "order_flow_imbalance": {
-      "book_time": "2026-10-02T23:40:00+00:00",
+      "book_time": "2026-10-03T04:00:00+00:00",
       "reference_price": 4140.52,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -14867,11 +14862,11 @@
         },
         {
           "price": 4100.0,
-          "long_pct": 0.3095,
+          "long_pct": 0.3096,
           "short_pct": 0.1548,
-          "total_pct": 0.4643,
-          "net_imbalance": 0.1547,
-          "ratio": 1.9994,
+          "total_pct": 0.4644,
+          "net_imbalance": 0.1548,
+          "ratio": 2.0,
           "dominant_side": "long",
           "one_sided": false,
           "flagged": false,
@@ -15517,11 +15512,11 @@
         },
         {
           "price": 4125.0,
-          "long_pct": 0.3095,
+          "long_pct": 0.3096,
           "short_pct": 0.3676,
-          "total_pct": 0.6771,
-          "net_imbalance": -0.0581,
-          "ratio": 1.1877,
+          "total_pct": 0.6772,
+          "net_imbalance": -0.058,
+          "ratio": 1.1873,
           "dominant_side": "short",
           "one_sided": false,
           "flagged": false,
@@ -18673,19 +18668,6 @@
           "flagged": true,
           "distance_from_price": 141.98,
           "distance_pct": 3.429
-        },
-        {
-          "price": 4283.5,
-          "long_pct": 0.0,
-          "short_pct": 0.0193,
-          "total_pct": 0.0193,
-          "net_imbalance": -0.0193,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": 142.98,
-          "distance_pct": 3.4532
         },
         {
           "price": 4284.5,
@@ -24306,19 +24288,6 @@
           "distance_pct": 3.429
         },
         {
-          "price": 4283.5,
-          "long_pct": 0.0,
-          "short_pct": 0.0193,
-          "total_pct": 0.0193,
-          "net_imbalance": -0.0193,
-          "ratio": null,
-          "dominant_side": "short",
-          "one_sided": true,
-          "flagged": true,
-          "distance_from_price": 142.98,
-          "distance_pct": 3.4532
-        },
-        {
           "price": 4284.5,
           "long_pct": 0.0193,
           "short_pct": 0.0,
@@ -24814,17 +24783,17 @@
         }
       ],
       "summary": {
-        "bucket_count": 577,
-        "flagged_count": 428,
+        "bucket_count": 576,
+        "flagged_count": 427,
         "long_pct_above_price": 5.0446,
-        "short_pct_above_price": 9.8623,
-        "long_pct_below_price": 17.9874,
+        "short_pct_above_price": 9.843,
+        "long_pct_below_price": 17.9876,
         "short_pct_below_price": 5.7231,
-        "net_imbalance_total": 7.4466
+        "net_imbalance_total": 7.4661
       }
     },
     "position_imbalance": {
-      "book_time": "2026-10-02T23:40:00+00:00",
+      "book_time": "2026-10-03T04:00:00+00:00",
       "reference_price": 4140.52,
       "ratio_threshold": 3.0,
       "matrix": [
@@ -42265,7 +42234,7 @@
         "NAS100_USD": 0.658069913865494,
         "US30_USD": 0.6704222481071784
       },
-      "previous_run_close": 4142.93
+      "previous_run_close": 4140.52
     }
   },
   "errors": {}
